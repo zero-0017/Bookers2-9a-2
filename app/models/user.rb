@@ -23,6 +23,8 @@ validates :introduction, length: {maximum: 50}
   has_many :user_rooms
   has_many :chats
   has_many :rooms, through: :user_rooms
+  
+  has_many :view_counts, dependent: :destroy
 
 
   def get_profile_image
